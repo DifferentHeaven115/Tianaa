@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5)
+}
+
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #86d3f7, #beeef5);
+  padding: 10px;
+}
+.card{
+  width: 350px;
+  height: 515px;
+  margin: 100px auto 0;
+  perspective: 1000px;
+}
+
+.card-inner{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.front,.back{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility:hidden;
+}
+
+.front{
+  background-image: url(pictures/hinh_Tam.JPG);
+  background-size: cover;
+  background-position: center;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white; 
+}
+
+.front h2{
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.front p{
+  color: white;
+  font-size: 15px;
+  margin-top: 13px;
+}
+
+.front button{
+  width: 120x;
+  border: 1px solid white;
+  background: transparent;
+  border-radius: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 8px 15px;
+  color: white;
+  font-size: 20px;
+}
+
+
+.back{
+  background-color: white;
+  padding: 20px 40px;
+  transform: rotateY(180deg);
+}
+
+.back h1{
+  font-size: 50px;
+  line-height: 55px;
+  margin-bottom: 10px;
+}
+
+.back span{
+  font-weight: 400;
+}
+.back img {
+  width: 200px;
+}
+
+.card:hover .card-inner{
+  transform: rotateY(180deg);
+}
